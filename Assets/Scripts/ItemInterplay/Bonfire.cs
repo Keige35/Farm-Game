@@ -8,6 +8,7 @@ public class Bonfire : InterplayObject
     [SerializeField] private Transform endPosition;
     [SerializeField] private ParticleSystem particleSystemBonfire;
     [SerializeField] private float dropItemSqure;
+    private bool isCocked = false;
     public override void IterplayObject(CharacterInvetory characterInvetory)
     {
         var item = characterInvetory.GetItemByType(ItemType.Meat);
@@ -18,10 +19,12 @@ public class Bonfire : InterplayObject
             item.transform.rotation = bonfire.transform.rotation;
             item.transform.DOKill();
             item.transform.DOShakeScale(0.4f, 0.3f);
+            isCocked = true;
             StartCoroutine(SpawnCookedObject(item));
             
             return;
         }
+        if(isCocked == true) return;
         var handItem = characterInvetory.GetHandItemByType(HandItemType.FullBucket);
         if (handItem)
         {
@@ -51,6 +54,7 @@ public class Bonfire : InterplayObject
         sequence.Join(newObject.transform.DOJump(newPosition, 1.8f, 1, 0.9f).SetEase(ease));
         sequence.Append(newObject.transform.DOShakeScale(0.4f, 0.3f));
         sequence.Append(DOVirtual.DelayedCall(0.2f, () => { newObject.IsSelectable = true; }));
+        isCocked = false;
     }
     void LightFire()
     {
