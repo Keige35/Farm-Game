@@ -13,7 +13,7 @@ public class Bonfire : InterplayObject
             characterInvetory.AddNewHandItem(newBucket);
             ChokeFire();
         }
-        else
+        else 
         {
             LightFire();
         }
