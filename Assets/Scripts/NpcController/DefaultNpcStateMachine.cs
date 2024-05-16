@@ -37,6 +37,7 @@ public class DefaultNpcStateMachine : Damageable
     protected override void HealthUpdated()
     {
         changedHealth?.Invoke(currentHealth, maxHealth, gameObject);
+
         if (stateMachine.CurrentState == deadState)
         {
             return;

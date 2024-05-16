@@ -127,7 +127,7 @@ public class CharacterInvetory : MonoBehaviour
     public PlayerHandItem GetHandItem()
     {
         var returnValue = currentHandItem;
-        DropHandItem();
+        //DropHandItem();
 
         return returnValue;
     }

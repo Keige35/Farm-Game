@@ -11,20 +11,18 @@ public class Bonfire : InterplayObject
     private bool isCocked = false;
     public override void IterplayObject(CharacterInvetory characterInvetory)
     {
-        var item = characterInvetory.GetItemByType(ItemType.Meat);
-        if (item)
+        if (particleSystemBonfire.gameObject.activeInHierarchy)
         {
-            item.IsSelectable = false;
-            item.transform.position = bonfire.transform.position+Vector3.up;
-            item.transform.rotation = bonfire.transform.rotation;
-            item.transform.DOKill();
-            item.transform.DOShakeScale(0.4f, 0.3f);
-            isCocked = true;
-            StartCoroutine(SpawnCookedObject(item));
-            
-            return;
+            var item = characterInvetory.GetItemByType(ItemType.Meat);
+            if (item)
+            {
+                Cooking(item); 
+                return;
+            }
         }
+        
         if(isCocked == true) return;
+
         var handItem = characterInvetory.GetHandItemByType(HandItemType.FullBucket);
         if (handItem)
         {
@@ -35,8 +33,19 @@ public class Bonfire : InterplayObject
         }
         else 
         {
-            LightFire();
+            if(characterInvetory.GetHandItem() == null) LightFire();
         }
+    }
+
+    private void Cooking(Item item)
+    {
+            item.IsSelectable = false;
+            item.transform.position = bonfire.transform.position + Vector3.up;
+            item.transform.rotation = bonfire.transform.rotation;
+            item.transform.DOKill();
+            item.transform.DOShakeScale(0.4f, 0.3f);
+            isCocked = true;
+            StartCoroutine(SpawnCookedObject(item));   
     }
     private IEnumerator SpawnCookedObject(Item item)
     {
