@@ -44,5 +44,5 @@ public enum ItemType
     Clear,
     Candy,
     Meat,
-    CookedMeat,
+    RawMeat,
 }
