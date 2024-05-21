@@ -6,24 +6,24 @@ using UnityEngine.AI;
 [RequireComponent(typeof(ItemDropper))]
 public class PuduNpcStateMachine : Damageable
 {
-    [SerializeField] private Transform floorPosition;
-    [SerializeField] private Vector2 size;
+    [SerializeField] protected Transform floorPosition;
+    [SerializeField] protected Vector2 size;
 
-    [SerializeField] private Animator animator;
-    [SerializeField] private NavMeshAgent navMeshAgent;
+    [SerializeField] protected Animator animator;
+    [SerializeField] protected NavMeshAgent navMeshAgent;
 
-    private NpcWalkState walkState;
-    private NpcRunState runState;
-    private NpcDeadState deadState;
+    protected NpcWalkState walkState;
+    protected NpcRunState runState;
+    protected NpcDeadState deadState;
 
-    private ItemDropper itemDropper;
+    protected ItemDropper itemDropper;
 
-    private Vector3 startPosition;
+    protected Vector3 startPosition;
 
-    private Transform player;
+    protected Transform player;
 
-    private StateMachine stateMachine;
-    private List<float> damagePercent = new List<float>();
+    protected StateMachine stateMachine;
+    protected List<float> damagePercent = new List<float>();
 
     private void Update()
     {

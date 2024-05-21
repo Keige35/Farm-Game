@@ -11,7 +11,7 @@ public class DamageableSpawner : MonoBehaviour
     {
         for (int i = 0; i < amount; i++)
         {
-            ItemSpawner.Instance.SpawnNewDamageableItem(DamageableType.Pudu, transform.position, transform.rotation);
+            ItemSpawner.Instance.SpawnNewDamageableItem(damageableType, transform.position, transform.rotation);
         }
     }
 }
