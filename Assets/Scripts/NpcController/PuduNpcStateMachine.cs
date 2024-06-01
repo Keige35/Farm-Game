@@ -6,24 +6,24 @@ using UnityEngine.AI;
 [RequireComponent(typeof(ItemDropper))]
 public class PuduNpcStateMachine : Damageable
 {
-    [SerializeField] protected Transform floorPosition;
-    [SerializeField] protected Vector2 size;
+    [SerializeField] private Transform floorPosition;
+    [SerializeField] private Vector2 size;
 
-    [SerializeField] protected Animator animator;
-    [SerializeField] protected NavMeshAgent navMeshAgent;
+    [SerializeField] private Animator animator;
+    [SerializeField] private NavMeshAgent navMeshAgent;
 
-    protected NpcWalkState walkState;
-    protected NpcRunState runState;
-    protected NpcDeadState deadState;
+    private NpcWalkState walkState;
+    private NpcRunState runState;
+    private NpcDeadState deadState;
 
-    protected ItemDropper itemDropper;
+    private ItemDropper itemDropper;
 
-    protected Vector3 startPosition;
+    private Vector3 startPosition;
 
-    protected Transform player;
+    private Transform player;
 
-    protected StateMachine stateMachine;
-    protected List<float> damagePercent = new List<float>();
+    private StateMachine stateMachine;
+    private List<float> damagePercent = new List<float>();
 
     private void Update()
     {
@@ -46,7 +46,7 @@ public class PuduNpcStateMachine : Damageable
         {
             return;
         }
-        
+
         var currentPercent = (float) currentHealth / maxHealth;
         currentPercent *= 100f;
         UpdatePercent(currentPercent);
@@ -57,7 +57,7 @@ public class PuduNpcStateMachine : Damageable
         {
             return;
         }
-
+        
         stateMachine.SetState(deadState);
     }
 
@@ -95,6 +95,7 @@ public class PuduNpcStateMachine : Damageable
         runState.SetPosition(endPosition);
         stateMachine.SetState(runState);
     }
+
 
     protected virtual void InitializeStateMachine()
     {

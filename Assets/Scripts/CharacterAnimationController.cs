@@ -155,5 +155,4 @@ public enum NpcAnimationType
     Run,
     Dead,
     Eat,
-    Fly,
 }
