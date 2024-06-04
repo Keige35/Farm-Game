@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2534289456224378858
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6418124925622386648}
+  - component: {fileID: 3979602329797237391}
+  - component: {fileID: 742943386786715209}
+  m_Layer: 0
+  m_Name: ItemSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6418124925622386648
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2534289456224378858}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.42, y: 0.932, z: 1.75}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3979602329797237391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2534289456224378858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0921b04a5cef3ba4bb81e9e4475c5f22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handItemSpawnConfigurations:
+  - <ItemType>k__BackingField: 0
+    <Prefab>k__BackingField: {fileID: 3352606800152793102, guid: 3e5d622bb7b195c41ab4829dbec8ba7b, type: 3}
+  - <ItemType>k__BackingField: 1
+    <Prefab>k__BackingField: {fileID: 7221399108471628072, guid: 3ee675be979231b48ba03de5d6fe0050, type: 3}
+  - <ItemType>k__BackingField: 2
+    <Prefab>k__BackingField: {fileID: 7740950255726748510, guid: 9718a512ae8372243ad199b82346da89, type: 3}
+  itemSpawnConfigurations:
+  - <ItemType>k__BackingField: 0
+    <Prefab>k__BackingField: {fileID: 8399778931517563846, guid: b5cd330ead0c653448b831f5bda6575d, type: 3}
+  - <ItemType>k__BackingField: 1
+    <Prefab>k__BackingField: {fileID: 9084785621695526122, guid: 08030006a3a35164a8dca9676ccfb6f8, type: 3}
+  - <ItemType>k__BackingField: 2
+    <Prefab>k__BackingField: {fileID: 669637576858336811, guid: db8d846dad4d36f4685935513632ca41, type: 3}
+  - <ItemType>k__BackingField: 4
+    <Prefab>k__BackingField: {fileID: 723283300488868918, guid: ead86381ff868314683892eed9f04ff7, type: 3}
+  - <ItemType>k__BackingField: 5
+    <Prefab>k__BackingField: {fileID: 669637576858336811, guid: 1e2165a3e9d720640a35abfba1f469e0, type: 3}
+  - <ItemType>k__BackingField: 6
+    <Prefab>k__BackingField: {fileID: 669637576858336811, guid: de206515d569e684a98db3d6a0666d9c, type: 3}
+  damageableSpawnConfigurations:
+  - <DamageableType>k__BackingField: 0
+    <Prefab>k__BackingField: {fileID: 5283467740063833762, guid: af71dd75aef87b54180b5af54b9cc11e, type: 3}
+  - <DamageableType>k__BackingField: 1
+    <Prefab>k__BackingField: {fileID: 795759720377128438, guid: 262b8722996365940b0ca9f49a2d9e6d, type: 3}
+  effectSpawnConfigurations:
+  - <effectType>k__BackingField: 0
+    <Prefab>k__BackingField: {fileID: 2053872092458098083, guid: 7ee24f5088beea747ab26b288a0e529e, type: 3}
+--- !u!114 &742943386786715209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2534289456224378858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23ebd21612bdc9a41bcbd30999add6a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteConfigurations:
+  - <Sprite>k__BackingField: {fileID: -261852827, guid: 3504ca080c361e641a5dc9055c975b30, type: 3}
+    <ItemType>k__BackingField: 0
+  - <Sprite>k__BackingField: {fileID: -1848720349, guid: 3504ca080c361e641a5dc9055c975b30, type: 3}
+    <ItemType>k__BackingField: 1
+  - <Sprite>k__BackingField: {fileID: -2127712829, guid: 3504ca080c361e641a5dc9055c975b30, type: 3}
+    <ItemType>k__BackingField: 2
+  - <Sprite>k__BackingField: {fileID: -1967580864, guid: 3504ca080c361e641a5dc9055c975b30, type: 3}
+    <ItemType>k__BackingField: 4
+  - <Sprite>k__BackingField: {fileID: -73997313, guid: 3504ca080c361e641a5dc9055c975b30, type: 3}
+    <ItemType>k__BackingField: 6
+  - <Sprite>k__BackingField: {fileID: 185787114, guid: 3504ca080c361e641a5dc9055c975b30, type: 3}
+    <ItemType>k__BackingField: 5
