@@ -40,6 +40,11 @@ public class PuduNpcStateMachine : Damageable
         itemDropper = GetComponent<ItemDropper>();
     }
 
+    public void SaveCompleted()
+    {
+        startPosition = floorPosition.position;
+    }
+
     protected override void HealthUpdated()
     {
         if (stateMachine.CurrentState == deadState)
@@ -47,7 +52,7 @@ public class PuduNpcStateMachine : Damageable
             return;
         }
 
-        var currentPercent = (float) currentHealth / maxHealth;
+        var currentPercent = (float)currentHealth / maxHealth;
         currentPercent *= 100f;
         UpdatePercent(currentPercent);
 
@@ -57,7 +62,7 @@ public class PuduNpcStateMachine : Damageable
         {
             return;
         }
-        
+
         stateMachine.SetState(deadState);
     }
 
@@ -83,7 +88,7 @@ public class PuduNpcStateMachine : Damageable
     public override void Initialize()
     {
         base.Initialize();
-        damagePercent = new List<float> {50f, 0f};
+        damagePercent = new List<float> { 50f, 0f };
         startPosition = floorPosition.position;
         InitializeStateMachine();
     }

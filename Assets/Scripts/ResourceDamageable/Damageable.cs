@@ -56,4 +56,6 @@ public enum DamageableType
 {
     CandyTree,
     Pudu,
+    Rock,
+    Tree,
 }

@@ -3,4 +3,6 @@
     Bucket,
     FullBucket,
     Axe,
+    Clear,
+    Pickaxe,
 }

@@ -45,4 +45,7 @@ public enum ItemType
     Candy,
     Meat,
     RawMeat,
+    GoldOre,
+    //Stone,
+    //Wood
 }
