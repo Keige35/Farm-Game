@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5351211079647381233}
   - component: {fileID: 4506562196585333461}
   - component: {fileID: 3868273299238659480}
+  - component: {fileID: -7484103279487890683}
   m_Layer: 0
   m_Name: Rock_2 1
   m_TagString: Untagged
@@ -147,6 +148,24 @@ MonoBehaviour:
   spawnPosition: {fileID: 198281451874201450}
   floorPosition: {fileID: 4128754732371360089}
   size: {x: 5, y: 5}
+--- !u!114 &-7484103279487890683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8066694430449533002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.46497867, g: 0.764151, b: 0.5546896, a: 1}
+  outlineWidth: 4
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &9037624981211666331
 GameObject:
   m_ObjectHideFlags: 0
@@ -502,11 +521,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8307322894754653445, guid: 53168ceb81c92934d9d8edab7fef6d9e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5
+      value: 1.06
       objectReference: {fileID: 0}
     - target: {fileID: 8307322894754653445, guid: 53168ceb81c92934d9d8edab7fef6d9e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.7174149
+      value: -0.72
       objectReference: {fileID: 0}
     - target: {fileID: 8307322894754653445, guid: 53168ceb81c92934d9d8edab7fef6d9e, type: 3}
       propertyPath: m_LocalRotation.w
