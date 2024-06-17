@@ -56,7 +56,7 @@ public class CrafteInterplayObject : InterplayObject
     {
         itemSpawner ??= ServiceLocator.GetService<ItemSpawner>();
         yield return new WaitForSeconds(0.3f);
-        var newObject = itemSpawner.GetItemByType(ItemType.Cookies);
+        var newObject = itemSpawner.GetItemByType(craftItem.ItemType);
         newObject.transform.position = endCraftPosition.position;
         newObject.transform.rotation = endCraftPosition.rotation;
         newObject.transform.DOKill();

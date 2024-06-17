@@ -142,6 +142,15 @@ public class CharacterInvetory : MonoBehaviour
         currentHandItem = handItem;
     }
 
+    public PlayerHandItem CurrentHandItemType(HandItemType handItemType)
+    {
+        if (currentHandItem == null || currentHandItem.HandItemType != handItemType)
+        {
+            return null;
+        }
+        var returnValue = currentHandItem;
+        return returnValue;
+    }
     public PlayerHandItem GetHandItem()
     {
         var returnValue = currentHandItem;

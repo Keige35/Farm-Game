@@ -146,6 +146,7 @@ public enum CharacterAnimationType
     Clear,
     AxeAttack,
     Angry,
+    FishingCast,
 }
 
 public enum NpcAnimationType

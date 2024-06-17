@@ -32,4 +32,21 @@ public class ItemDropper : MonoBehaviour
         sequence.Append(droppedItem.transform.DOShakeScale(0.3f, 0.4f));
         sequence.OnComplete(() => { droppedItem.IsSelectable = true;});
     }
+
+    public void DropItem(Transform startPoint, Transform endPoint)
+    {
+        var dropPosition = endPoint.position;
+        dropPosition += new Vector3(Random.Range(-radius.x / 2f, radius.x / 2f), 0,
+           Random.Range(-radius.y / 2f, radius.y / 2f));
+        var droppedItem = ItemSpawner.Instance.GetItemByType(dropItem);
+        droppedItem.transform.position = startPoint.position;
+        droppedItem.transform.rotation = Random.rotation;
+        droppedItem.IsSelectable = false;
+
+        var sequence = DOTween.Sequence();
+        sequence.Append(droppedItem.transform.DOJump(dropPosition, 1.7f, 1, 0.9f).SetEase(Ease.Flash));
+        sequence.Join(droppedItem.transform.DORotate(Vector3.zero, 0.9f));
+        sequence.Append(droppedItem.transform.DOShakeScale(0.3f, 0.4f));
+        sequence.OnComplete(() => { droppedItem.IsSelectable = true; });
+    }
 }

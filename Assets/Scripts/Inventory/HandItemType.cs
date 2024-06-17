@@ -5,4 +5,5 @@
     Axe,
     Clear,
     Pickaxe,
+    FishingRod,
 }
