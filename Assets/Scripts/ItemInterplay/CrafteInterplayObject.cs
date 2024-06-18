@@ -43,7 +43,7 @@ public class CrafteInterplayObject : InterplayObject
             {
                 var transformConfiguration = craftConfiguration.AttachItem.transform;
                 var returnToPoolObject = craftConfiguration.AttachItem;
-                transformConfiguration.DOScale(Vector3.zero, 0.3f)
+                transformConfiguration.DOScale(Vector3.one, 0.3f)
                     .OnComplete(() => returnToPoolObject.ReturnToPool());
                 craftConfiguration.AttachItem = null;
             }
